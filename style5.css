@@ -1,0 +1,332 @@
+/* General Body Styles (ensure consistency if not already present) */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* Light background for general pages */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header Styles (consistent with other pages) */
+header {
+    background-color: #004080; /* Dark blue for a professional look */
+    color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex; /* Use flexbox for header content */
+    justify-content: space-between; /* Distribute items */
+    align-items: center; /* Vertically align items */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: bold;
+    padding-left: 10px; /* Small padding for alignment */
+}
+
+header nav {
+    display: flex;
+    gap: 20px;
+    padding-right: 10px; /* Small padding for alignment */
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px; /* Increased padding for nav links */
+    transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
+    border-radius: 5px;
+}
+
+header nav a:hover {
+    background-color: #0056b3; /* Slightly lighter blue on hover */
+    color: #f8f9fa;
+    border-radius: 8px; /* Slightly more rounded on hover */
+}
+
+/* Main Content Section */
+main.container {
+    flex: 1; /* Allows main content to grow */
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+    text-align: center; /* Center content within sections by default */
+}
+
+section h2 {
+    font-size: 2em;
+    color: #004080;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #007bff; /* Accent color */
+    border-radius: 2px;
+}
+
+/* Verification Form Section */
+.verification-form {
+    max-width: 500px; /* Limit width for the form */
+    margin: 0 auto 40px auto; /* Center the form and add bottom margin */
+    padding: 30px;
+}
+
+.verification-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center form elements */
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: left; /* Align label and input to the left */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1.1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="text"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+/* Alert Messages (consistent with other pages) */
+.alert {
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 0.95em;
+    text-align: left; /* Align text within alert */
+    max-width: 800px; /* Limit width of alerts */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alert.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.alert.warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+/* Certificate Details Section */
+.certificate-details {
+    text-align: left; /* Align details content to the left */
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid for details */
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.info-grid div {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    font-size: 0.95em;
+    word-wrap: break-word; /* Prevent long words from overflowing */
+}
+
+.info-grid div strong {
+    color: #004080;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.05em;
+}
+
+.qr-code {
+    grid-column: span 2; /* Span two columns for the QR code */
+    text-align: center;
+    padding: 20px; /* Add more padding for QR */
+}
+
+.qr-code img {
+    max-width: 180px; /* Control QR code size */
+    height: auto;
+    border: 1px solid #ddd;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Buttons (consistent with other pages) */
+.btn {
+    display: inline-block; /* Keep inline-block for form button, block for download */
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0,123,255,0.2);
+    margin-top: 20px; /* Space above button */
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,123,255,0.3);
+}
+
+/* Specific styling for the download button at the bottom */
+.certificate-details p .btn {
+    display: block; /* Make download button a block element */
+    width: fit-content; /* Adjust width to content */
+    margin: 30px auto 0 auto; /* Center it below details */
+    background-color: #28a745; /* Green for download */
+    box-shadow: 0 4px 10px rgba(40,167,69,0.2);
+}
+
+.certificate-details p .btn:hover {
+    background-color: #218838;
+    box-shadow: 0 6px 15px rgba(40,167,69,0.3);
+}
+
+
+/* Footer Styles (consistent with other pages) */
+footer {
+    background-color: #333;
+    color: #eee;
+    padding: 20px 0;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+footer .container p {
+    margin: 5px 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav {
+        margin-top: 15px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header nav a {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr; /* Stack information on small screens */
+        gap: 15px;
+    }
+
+    .qr-code {
+        grid-column: span 1; /* Reset span for QR code */
+    }
+
+    .alert {
+        margin-left: 15px; /* Add margin on smaller screens */
+        margin-right: 15px;
+    }
+
+    .certificate-details p .btn {
+        width: 90%; /* Make download button wider on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+
+    .verification-form {
+        padding: 20px;
+    }
+
+    .form-group input[type="text"] {
+        font-size: 1em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
