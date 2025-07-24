@@ -1,0 +1,1 @@
+[24-Jul-2025 13:57:33 UTC] PHP Warning:  mysqli::__construct(): (HY000/2005): Unknown server host 'bpuma_BDUser21' (-2) in /home/bpuma/public_html/user21/conexion_db.php on line 10
